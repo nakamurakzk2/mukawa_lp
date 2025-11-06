@@ -62,6 +62,31 @@
     });
   }
 
+  const agreementToggles = document.querySelectorAll('[data-agreement-toggle]');
+  if (agreementToggles.length) {
+    agreementToggles.forEach((toggle) => {
+      const targetSelector = toggle.getAttribute('data-agreement-toggle');
+      if (!targetSelector) return;
+      const target = document.querySelector(targetSelector);
+      if (!target) return;
+      toggle.addEventListener('click', () => {
+        const willOpen = target.hasAttribute('hidden');
+        if (willOpen) {
+          target.removeAttribute('hidden');
+        } else {
+          target.setAttribute('hidden', '');
+        }
+        toggle.setAttribute('aria-expanded', String(willOpen));
+        toggle.textContent = willOpen ? '▲' : '▼';
+        const openLabel = toggle.getAttribute('data-label-open');
+        const closeLabel = toggle.getAttribute('data-label-close');
+        if (openLabel && closeLabel) {
+          toggle.setAttribute('aria-label', willOpen ? closeLabel : openLabel);
+        }
+      });
+    });
+  }
+
   const revealNodes = document.querySelectorAll('[data-reveal]');
   if (revealNodes.length) {
     const reveal = (entries, observer) => {

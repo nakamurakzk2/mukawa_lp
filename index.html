@@ -313,6 +313,21 @@
                     <p>販売個数：10口</p>
                     <p>有効期限：購入日から3年間</p>
                     <p>購入上限：1社あたり上限なし（※同日連続枠は不可）</p>
+                    <p>予約方法・面談実施フローNFT付与：決済完了後、権利トークンを配布（プラットフォーム「TOKKEN」上で受け取り可能）日程調整申請（有効期限まで任意のタイミングで可能）：基本情報提出（会社名、所在地、事業内容、代表者等）・希望日程の提出・テーマ・出席者人数の共有・事前共有資料の提出町内調整：町長・関係課の日程調整後に確定通知当日実施：現地（役場）またはオンライン
+                      ※予約は本プラットフォームのチャットツールより受け付けます。</p>
+                      <p>商品に含まれない権利
+                        ・契約・助成・制度適用等の約束／優遇の保証
+                        ・入札・随意契約・補助金審査等への影響
+                        ・意思決定権の付与、政策採択の保証
+                        ・広報露出の確約、町有資産の利用確約
+                        
+                        禁止事項・参加不可属性
+                        ・反社会的勢力・その関係者、違法行為を助長する事業
+                        ・公序良俗に反する、特定の政治的・宗教的勧誘を主目的とする行為
+                        ・誹謗中傷、圧力・威迫、虚偽表示、ステルスマーケティング
+                        ・本権利を誤解を招く表示で二次流通・周知する行為（NFTの譲渡・販売自体は可）
+                        ・秘匿情報の不正入手・開示の要求
+                        </p>
                   </dd>
                 </div>
               </dl>
@@ -323,14 +338,16 @@
 
       <section id="section-purchase" class="section section--purchase reveal" data-section-title="テキスト" data-reveal>
         <div class="container">
+          <div class="purchase-intro">
+            <h2 class="purchase-intro__title">TOKKEN新規アカウントのご登録と商品の購入はこちらから</h2>
+            <p class="purchase-intro__lead">
+              アカウントの登録後、登録完了メールが届きます。<br />
+              登録完了メールからログインして商品をご購入ください。
+            </p>
+          </div>
+
           <div class="purchase-card">
-            <header class="purchase-card__header">
-              <span class="purchase-card__label">バリエーション</span>
-              <div class="purchase-variants" role="radiogroup" aria-label="バリエーション">
-                <button class="purchase-variant is-active" type="button" aria-pressed="true">バリエーション1</button>
-                <button class="purchase-variant" type="button" aria-pressed="false">バリエーション2</button>
-              </div>
-            </header>
+            <h3 class="purchase-card__title">商品名: 旧金毘羅大芝居の「せり」の仕掛け体験権利</h3>
 
             <div class="purchase-quantity">
               <span class="purchase-card__label">数量</span>
@@ -339,44 +356,80 @@
                 <span class="purchase-quantity__value" aria-live="polite">1</span>
                 <button class="purchase-quantity__btn" type="button" aria-label="数量を1増やす">＋</button>
               </div>
-              <span class="purchase-quantity__stock">
-                <span class="purchase-quantity__stock-indicator" aria-hidden="true"></span>3枠の在庫
-              </span>
             </div>
 
             <form class="purchase-form" action="#" method="post">
               <div class="purchase-form__group">
-                <label for="purchase-email">メールアドレス</label>
+                <label class="sr-only" for="purchase-email">メールアドレス</label>
                 <input id="purchase-email" name="purchase-email" type="email" placeholder="メールアドレス" required />
               </div>
               <div class="purchase-form__group">
-                <label for="purchase-email-confirm">メールアドレス（確認）</label>
-                <input id="purchase-email-confirm" name="purchase-email-confirm" type="email" placeholder="メールアドレス" required />
+                <label class="sr-only" for="purchase-email-confirm">メールアドレス（確認）</label>
+                <input id="purchase-email-confirm" name="purchase-email-confirm" type="email" placeholder="メールアドレス（確認）" required />
               </div>
               <div class="purchase-form__group">
-                <label for="purchase-password">パスワード</label>
+                <label class="sr-only" for="purchase-password">パスワード</label>
                 <input id="purchase-password" name="purchase-password" type="password" placeholder="パスワード" required />
               </div>
               <div class="purchase-form__group">
-                <label for="purchase-password-confirm">パスワード（確認）</label>
-                <input id="purchase-password-confirm" name="purchase-password-confirm" type="password" placeholder="パスワード" required />
+                <label class="sr-only" for="purchase-password-confirm">パスワード（確認）</label>
+                <input id="purchase-password-confirm" name="purchase-password-confirm" type="password" placeholder="パスワード（確認）" required />
               </div>
 
               <div class="purchase-form__agreements">
-                <label class="purchase-checkbox">
-                  <input type="checkbox" name="terms" required />
-                  <span>
-                    <strong>利用規約</strong><br />
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
-                  </span>
-                </label>
-                <label class="purchase-checkbox">
-                  <input type="checkbox" name="privacy" required />
-                  <span>
-                    <strong>プライバシーポリシー</strong><br />
-                    テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。
-                  </span>
-                </label>
+                <div class="purchase-agreement">
+                  <div class="purchase-agreement__header">
+                    <div class="purchase-agreement__check">
+                      <input id="purchase-terms" type="checkbox" name="terms" required />
+                      <label for="purchase-terms"><strong>利用規約</strong></label>
+                      <button
+                        type="button"
+                        class="purchase-agreement__toggle"
+                        data-agreement-toggle="#agreement-terms"
+                        aria-expanded="false"
+                        aria-controls="agreement-terms"
+                        data-label-open="利用規約の文言を表示"
+                        data-label-close="利用規約の文言を閉じる"
+                        aria-label="利用規約の文言を表示"
+                      >
+                        ▼
+                      </button>
+                    </div>
+                  </div>
+                  <div id="agreement-terms" class="purchase-agreement__content" hidden>
+                    <p>本サービスをご利用いただくにあたり、以下の利用規約に同意いただいたものとみなします。</p>
+                    <p>当社は、予告なく本サービスの内容を変更・中止する場合があります。</p>
+                    <p>利用者は、法令および公序良俗に反する行為を行ってはなりません。</p>
+                    <p>当社は、利用者または第三者のトラブルについて一切の責任を負いません。</p>
+                  </div>
+                </div>
+
+                <div class="purchase-agreement">
+                  <div class="purchase-agreement__header">
+                    <div class="purchase-agreement__check">
+                      <input id="purchase-privacy" type="checkbox" name="privacy" required />
+                      <label for="purchase-privacy"><strong>プライバシーポリシー</strong></label>
+                      <button
+                        type="button"
+                        class="purchase-agreement__toggle"
+                        data-agreement-toggle="#agreement-privacy"
+                        aria-expanded="false"
+                        aria-controls="agreement-privacy"
+                        data-label-open="プライバシーポリシーの文言を表示"
+                        data-label-close="プライバシーポリシーの文言を閉じる"
+                        aria-label="プライバシーポリシーの文言を表示"
+                      >
+                        ▼
+                      </button>
+                    </div>
+                  </div>
+                  <div id="agreement-privacy" class="purchase-agreement__content" hidden>
+                    <p>当社は、個人情報を適切に管理し、目的外の利用は一切行いません。</p>
+                    <p>取得した情報は、サービスの提供および運営に必要な範囲でのみ使用します。</p>
+                    <p>法令に基づく場合を除き、第三者への提供はいたしません。</p>
+                    <p>個人情報の取扱いに関するお問い合わせには誠実に対応いたします。</p>
+                  </div>
+                </div>
               </div>
 
               <button class="purchase-submit" type="submit">登録して購入に進む</button>
