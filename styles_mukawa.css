@@ -1097,9 +1097,10 @@ ul {
 .flow-step {
   flex: 1 1 0;
   position: relative;
-  display: grid;
-  gap: clamp(12px, 3vw, 18px);
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
   text-align: center;
   padding-inline: clamp(8px, 2vw, 12px);
 }
@@ -1126,6 +1127,12 @@ ul {
   font-size: 1rem;
   letter-spacing: 0.04em;
   color: #6d5498;
+  min-height: 3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .flow-step__text {
