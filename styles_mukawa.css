@@ -1165,7 +1165,7 @@ ul {
 
 .policy-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: clamp(20px, 5vw, 36px);
 }
 
@@ -1605,10 +1605,6 @@ ul {
 
   .flow-step__arrow {
     display: none;
-  }
-
-  .policy-grid {
-    grid-template-columns: 1fr;
   }
 
   .purchase-card {
